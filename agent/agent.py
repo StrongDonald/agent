@@ -49,7 +49,7 @@ class Agent:
                  stream=True
                  ):
         
-        if os.path.exists(path):
+        if path != None and os.path.exists(path):
             context = path
         
         if len(extra_text) > 0:
@@ -117,3 +117,4 @@ class Agent:
                 variable = line.split('{')[1].split('}')[0]
                 variables.append(variable)
         return variables
+
